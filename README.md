@@ -1,34 +1,54 @@
-# Project 5: Crop and Weed Detection
+Project 4: Crop Production Prediction
+Project Overview
+This project focuses on building a machine learning model to predict agricultural crop production in India. Using a comprehensive dataset from data.gov.in, the model aims to provide valuable insights for agricultural planning and resource management. The core goal is to predict crop output based on various factors, which can be instrumental in addressing challenges related to food security and farm economics.
 
-### Project Overview
-This project focuses on building a computer vision model to automatically detect and classify crops and weeds in agricultural images. The goal is to develop a system that can be used for precision agriculture, enabling automated spraying of pesticides only on weeds, thereby reducing chemical waste and improving crop health.
+<br>
 
-### Methodology
-The solution was developed using a deep learning approach with the following key technologies:
-- **Programming Language:** Python
-- **Environment:** Google Colab with GPU acceleration
-- **Model:** YOLOv8n (a fast and efficient object detection model)
-- **Dataset:** A custom dataset containing 1300 images of sesame crops and various weeds, with annotations in YOLO format.
+Methodology
+The solution was developed using a supervised machine learning approach with a focus on regression analysis. The project workflow included the following key stages:
 
-The project workflow included:
-1.  **Data Preparation:** Correctly structuring the dataset and creating a `data.yaml` configuration file.
-2.  **Model Training:** Training a pre-trained YOLOv8n model for 50 epochs on the custom dataset.
-3.  **Model Evaluation:** Using `val()` to get quantitative metrics and generating plots like `results.png` and a confusion matrix.
-4.  **Inference:** Making predictions on unseen images to visually demonstrate the model's performance.
+Data Integration: Five separate CSV files containing data on crop trends, costs, production, and recommendations were loaded and merged into a single, cohesive dataset.
 
-### Key Results
-After training for 50 epochs, the model achieved the following performance on the test set:
-- **mAP50:** [Insert your mAP50 score here, e.g., 0.8543]
-- **Precision:** [Insert your Precision score here, e.g., 0.8211]
-- **Recall:** [Insert your Recall score here, e.g., 0.7952]
-The model successfully detects and classifies crops and weeds, demonstrating strong performance for this task.
+Data Preprocessing: The merged data was cleaned, reshaped from a wide to a long format, and preprocessed to handle missing values and inconsistent data types.
 
-### How to Run the Code
-You can run the entire project by opening the provided Colab notebook.
-1.  Click on the `Project_5_Crop_Weed_Detection_Colab_Workflow.ipynb` file in this repository.
-2.  Click the "Open in Colab" button at the top of the page.
-3.  Run the cells sequentially from top to bottom. The notebook will handle all data setup, model training, and evaluation automatically.
+Feature Engineering: Categorical features such as Crop, State, and Season were transformed using one-hot encoding to make them suitable for the machine learning model.
 
-### Dataset
-The dataset used in this project can be accessed from the following link:
-- [Link to your dataset on Google Drive]
+Model Training: A Random Forest Regressor model was trained on the prepared dataset. This model was chosen for its ability to handle complex, non-linear relationships within the data.
+
+Model Evaluation: The model's performance was evaluated using standard regression metrics, including Mean Absolute Error (MAE), Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and the R-squared (R 
+2
+ ) score.
+
+<br>
+
+Key Results
+The Random Forest Regressor model achieved the following performance on the test set:
+
+R-squared (R 
+2
+ ) Score: [Insert your R-squared score here, e.g., 0.95]
+
+Mean Absolute Error (MAE): [Insert your MAE here, e.g., 12.50]
+
+Root Mean Squared Error (RMSE): [Insert your RMSE here, e.g., 20.30]
+The high R 
+2
+  score indicates that the model is highly effective at explaining the variance in crop production and can make accurate predictions.
+
+<br>
+
+How to Run the Code
+You can run this project by opening the provided Colab notebook in Google Colab.
+
+Click on the ML-Internship-Project4-Crop-Production-Prediction.ipynb file in this repository.
+
+Click the "Open in Colab" button at the top of the page.
+
+Run all the cells sequentially from top to bottom. The notebook will handle all data loading, preprocessing, training, and evaluation automatically.
+
+<br>
+
+Dataset
+The original datasets used in this project are publicly available on data.gov.in. For convenience, the preprocessed CSV file used for model training is linked below.
+
+(https://drive.google.com/file/d/1m8rJeF4_uqaArHFPvKJ8s9qIQa7_Cbf2/view?usp=sharing)
