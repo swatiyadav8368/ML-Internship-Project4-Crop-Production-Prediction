@@ -17,9 +17,9 @@ The solution was developed using a supervised machine learning approach with a f
 
 #### Key Results
 The **Random Forest Regressor** model achieved the following performance on the test set:
--   **R-squared ($R^2$) Score:** [Insert your R-squared score here, e.g., 0.95]
--   **Mean Absolute Error (MAE):** [Insert your MAE here, e.g., 12.50]
--   **Root Mean Squared Error (RMSE):** [Insert your RMSE here, e.g., 20.30]
+-   **R-squared ($R^2$) Score:** 0.72
+-   **Mean Absolute Error (MAE):** 1279.16
+-   **Root Mean Squared Error (RMSE):** 3034.00
 The high $R^2$ score indicates that the model is highly effective at explaining the variance in crop production and can make accurate predictions.
 
 ***
